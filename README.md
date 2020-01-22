@@ -1,2 +1,5 @@
 # hello-world
-just another respository
+
+
+Hello everyone!
+I will become a great programmer!!!
