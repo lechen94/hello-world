@@ -1,0 +1,62 @@
+import java.util.*;
+public class Main {
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) 
+	{
+		Scanner in = new Scanner(System.in);
+		boolean mask=true;
+		int[] a=new int[100];
+		int[] b=new int[100];
+		int[] c=new int[100];
+		int x,n;
+		while(mask)
+		{
+			x=in.nextInt();
+			n=in.nextInt();
+			a[x]=n;
+			if(x==0)
+			{
+				mask=false;
+			}
+		}
+		mask=true;
+		while(mask)
+		{
+			x=in.nextInt();
+			n=in.nextInt();
+			b[x]=n;
+			if(x==0)
+			{
+				mask=false;
+			}
+		}
+		for(int i=0;i<a.length;i++)
+		{
+			c[i]=a[i]+b[i];
+		}
+		for(int i=(a.length-1);i>=0;i--)
+		{
+			if(c[i]==0)
+			{
+				continue;
+			}
+			else if(i!=1 && i!=0)
+			{
+				System.out.print(c[i]+"x"+i+"+");
+			}
+			else if(i==1)
+			{
+				System.out.print(c[i]+"x"+"+");
+			}
+			else
+			{
+				System.out.print(c[i]);
+			}
+				
+		}
+	
+
+	}
+}
